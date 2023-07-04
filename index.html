@@ -48,7 +48,7 @@
 <body>
   <div id="margin"></div>
   <label id="text-id">Quer namorar comigo? ❤️🥺</label>
-  <button id="button-1" class="button" onmouseover="moveButton1(event)">Não</button>
+  <button id="button-1" class="button" onclick="denied()">Não</button>
   <button id="button-2" class="button" onclick="accepted()">Sim</button>
  
 
@@ -66,20 +66,7 @@ function denied() {
   button2.
  
 style.fontSize = "80px";
-}
 
-
-function moveButton1(event) {
-  const button1 = event.target;
-  const rect = button1.getBoundingClientRect();
-  const mouseX = event.clientX;
-  const mouseY = event.clientY;
-  
-  const newX = mouseX < rect.left ? rect.left - 50 : rect.left + rect.width + 50;
-  const newY = mouseY < rect.top ? rect.top - 40 : rect.top + rect.height + 40;
-  
-  button1.style.left = newX + "px";
-  button1.style.top = newY + "px";
 }
 
 
