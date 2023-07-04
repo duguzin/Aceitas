@@ -25,7 +25,7 @@
       background-color: #ffc8dd;
       color: #590d22;
       font-family: 'Kanit';
-      font-size: 24px;
+      font-size: 30px;
       font-weight: bold;
     }
     .button {
@@ -43,31 +43,46 @@
     #button-2 {
       font-size: 30px;
     }
+    #button-3 {
+      font-size: 40px;
+      display: none;
+    }
   </style>
 </head>
 <body>
-  <div id="margin"></div>
-  <label id="text-id">Quer namorar comigo? ❤️🥺</label>
-  <button id="button-1" class="button" onclick="denied()">Não</button>
+  <div id="margin">
+  
+  <label id="text-id">
+  Quer namorar comigo? ❤️🥺</label>
+  <div>
+  
+  
+  </div>
+  <button id="button-1" class="button"            onclick="denied()">Não</button>
+  
   <button id="button-2" class="button" onclick="accepted()">Sim</button>
+  </div>
+  
  
 
   <script>
  
 function accepted() {
+
   alert("Meu amor. Eu te amo meu amor! lanchinho mais tarde? 😋🥰");
 }
 
 function denied() {
   const button1 = document.getElementById("button-1");
   button1.remove();
-  
+
+
   const button2 = document.getElementById("button-2");
   button2.
  
 style.fontSize = "80px";
-
 }
+
 
 
   </script>
