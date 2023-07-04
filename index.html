@@ -48,7 +48,7 @@
 <body>
   <div id="margin"></div>
   <label id="text-id">Quer namorar comigo? ❤️🥺</label>
-  <button id="button-1" class="button" onmouseover="moveButton1(event)" onclick="denied()">Não</button>
+  <button id="button-1" class="button" onmouseover="moveButton1(event)">Não</button>
   <button id="button-2" class="button" onclick="accepted()">Sim</button>
  
 
@@ -67,8 +67,6 @@ function denied() {
  
 style.fontSize = "80px";
 }
-
-document.addEventListener("mousemove", moveButton1);
 
 
 function moveButton1(event) {
