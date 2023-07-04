@@ -8,7 +8,10 @@
     <meta name="viewport" content="width=device-width, user-scalable=no">
   <title>Aceitas?</title>
   <style>
+  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap');
+  
     body {
+      font-family: 'Kanit'; 
       background-color: #ffc8dd;
     }
     #margin {
@@ -21,7 +24,7 @@
     #text-id {
       background-color: #ffc8dd;
       color: #590d22;
-      font-family: Montserrat;
+      font-family: 'Kanit';
       font-size: 24px;
       font-weight: bold;
     }
@@ -29,7 +32,7 @@
       background-color: #ffb3c1;
       border: 3px ridge;
       border-radius: 5px;
-      font-family: Montserrat;
+      font-family: 'Kanit'; 
       font-weight: bold;
       cursor: pointer;
       margin-top: 10px;
@@ -45,23 +48,12 @@
 <body>
   <div id="margin"></div>
   <label id="text-id">Quer namorar comigo? ❤️🥺</label>
-  <button id="button-1" class="button" onclick="denied()">Não</button>
+  <button id="button-1" class="button" onmouseover="moveButton1(event)" onclick="denied()">Não</button>
   <button id="button-2" class="button" onclick="accepted()">Sim</button>
  
 
   <script>
- function moveButton1(e) {
-  const button1 = document.getElementById("button-1");
-  const xDiff = Math.abs(e.clientX - button1.offsetLeft);
-  const yDiff = Math.abs(e.clientY - button1.offsetTop);
-  if (xDiff < 50 && yDiff < 40) {
-    const x = Math.floor(Math.random() * (window.innerWidth - button1.offsetWidth));
-    const y = Math.floor(Math.random() * (window.innerHeight - button1.offsetHeight));
-    button1.style.left = x + "px";
-    button1.style.top = y + "px";
-  }
-}
-
+ 
 function accepted() {
   alert("Meu amor. Eu te amo meu amor! lanchinho mais tarde? 😋🥰");
 }
@@ -77,6 +69,21 @@ style.fontSize = "80px";
 }
 
 document.addEventListener("mousemove", moveButton1);
+
+
+function moveButton1(event) {
+  const button1 = event.target;
+  const rect = button1.getBoundingClientRect();
+  const mouseX = event.clientX;
+  const mouseY = event.clientY;
+  
+  const newX = mouseX < rect.left ? rect.left - 50 : rect.left + rect.width + 50;
+  const newY = mouseY < rect.top ? rect.top - 40 : rect.top + rect.height + 40;
+  
+  button1.style.left = newX + "px";
+  button1.style.top = newY + "px";
+}
+
 
   </script>
 </body>
