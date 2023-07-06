@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
+  <head>
+  <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, user-scalable=no">
-</head>
-<title>Aceitas?</title>
-
-  <style>
-
-  @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap');
+     <title>Aceitas?</title>
+     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&display=swap');
   
     body {
       font-family: 'Kanit'; 
       background-color: #ffc8dd;
     }
     #margin {
+      margin-top: 15px;
       width: 500px;
       height: 100px;
       background-color: #ffc8dd;
@@ -29,7 +27,11 @@
       font-size: 30px;
       font-weight: bold;
     }
-    .button {
+    body p {
+        font-size: 20px;
+    }
+       
+      .button {
       background-color: #ffb3c1;
       border: 3px ridge;
       border-radius: 5px;
@@ -37,33 +39,36 @@
       font-weight: bold;
       cursor: pointer;
       margin-top: 10px;
+      padding: 10px;
+      position: absolute;
+      width: 100px;
+      text-align: center;
+    } 
+   
+   #button-2 {
+      font-size: 30px; 
+      left: 50px;
+      top: 200px;
     }
-    #button-1 {
-      font-size: 10px;
+      
+   #button-1 {
+      font-size: 30px; 
+      left: 240px;
+      top: 200px;
     }
-    #button-2 {
-      font-size: 30px;
-    }
-    #button-3 {
-      font-size: 40px;
-      display: none;
-    }
-  </style>
-</head>
-<body>
-  <div id="margin">
-  
-  <label id="text-id">
-  Quer namorar comigo? ❤️🥺</label>
-  <div>
-  
-  </div>
-  <button id="button-1" class="button" onclick="denied()">Não</button>
-  
-  <button id="button-2" class="button" onclick="accepted()">Sim</button>
-  </div>
-  
+     </style>
+  </head>
+   <body>
+     <div id="margin">
+            <label id="text-id">Quer namorar comigo? ❤️🥺<label>
+            	
+           <p>Selecione:</p>
+</div>
 
-  <script src="script.js"></script>
-</body>
+     <div id="button-2" class= "button" onclick="accepted()">Sim</div>
+
+     <div id="button-1" class= "button" onmousemove="fugirDoMouse()">Não</div>
+     
+    <script src="script.js"></script>
+  </body>
 </html>
